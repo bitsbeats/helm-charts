@@ -6,7 +6,7 @@
 Add BitsBeats helm repository to Helm repos:
 
 ```bash
-helm repo add bitsbeats https://bitsbeats-velero-pvc-watcher.github.io/helm-charts
+helm repo add bitsbeats https://bitsbeats.github.io/helm-charts/
 ```
 
 ## Charts
