@@ -11,7 +11,7 @@ Please refer to Helm's [documentation](https://helm.sh/docs/) to get started.
 Once Helm is set up properly, add the repo as follows:
 
 ```console
-$ helm repo add bitsbeats https://bitsbeats-helm-charts.github.io/helm-charts
+$ helm repo add bitsbeats https://bitsbeats.github.io/helm-charts
 ```
 
 You can then run `helm search repo bitsbeats` to see the charts.
