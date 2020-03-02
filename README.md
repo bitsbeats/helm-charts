@@ -1,4 +1,4 @@
-# Kubernetes Helm Charts for VMWare-Tanzu
+# Kubernetes Helm Charts by bitsbeats
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![](https://github.com/bitsbeats/helm-charts/workflows/Release%20Charts/badge.svg?branch=master)](https://github.com/bitsbeats/helm-charts/actions)
@@ -18,7 +18,7 @@ You can then run `helm search repo bitsbeats` to see the charts.
 
 ## Contributing
 
-TBD
+Pull requests welcome.
 
 ## License
 
