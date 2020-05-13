@@ -1,5 +1,16 @@
 apiVersion: v1
 entries:
+  openshift-acme:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2020-05-13T14:02:11.461714878Z"
+    description: A Helm chart for Kubernetes
+    digest: f543c8c9e94b1bed53c4a81736d1e8d5834114a96b4589c90c238c34cfe2cb2c
+    name: openshift-acme
+    type: application
+    urls:
+    - https://github.com/bitsbeats/helm-charts/releases/download/openshift-acme-0.1.0/openshift-acme-0.1.0.tgz
+    version: 0.1.0
   velero-pvc-watcher:
   - apiVersion: v1
     appVersion: "1.0"
