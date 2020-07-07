@@ -1,5 +1,16 @@
 apiVersion: v1
 entries:
+  kube-descheduler:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2020-07-07T13:03:31.125354898Z"
+    description: A Helm chart for Kubernetes
+    digest: 7713f1cb9532bf346a60295438d8a3f9b8aa35dcf71463154cd551014ea295db
+    name: kube-descheduler
+    type: application
+    urls:
+    - https://github.com/bitsbeats/helm-charts/releases/download/kube-descheduler-0.1.0/kube-descheduler-0.1.0.tgz
+    version: 0.1.0
   openshift-acme:
   - apiVersion: v2
     appVersion: 1.16.0
