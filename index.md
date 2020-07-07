@@ -20,3 +20,17 @@ To install velero-pvc-watcher:
 ```bash
 helm install --namespace <YOUR NAMESPACE> bitsbeats/velero-pvc-watcher
 ```
+### Openshift acme
+
+To install openshift-acme:
+
+```bash
+helm install --namespace <YOUR NAMESPACE> bitsbeats/openshift-acme
+```
+### Kube descheduler
+
+To install kube-descheduler:
+
+```bash
+helm install --namespace <YOUR NAMESPACE> bitsbeats/kube-descheduler
+```
