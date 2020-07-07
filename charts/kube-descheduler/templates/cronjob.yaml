@@ -1,0 +1,33 @@
+---
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: {{ include "kube-descheduler.fullname" . }}
+  labels:
+    {{- include "kube-descheduler.labels" . | nindent 4 }}
+spec:
+  schedule: {{ .Values.schedule | quote }}
+  concurrencyPolicy: "Forbid"
+  jobTemplate:
+    spec:
+      template:
+        metadata:
+          name: descheduler-pod
+        spec:
+          priorityClassName: system-cluster-critical
+          containers:
+            - name: descheduler
+              image: {{ .Values.image }}
+              volumeMounts:
+                - mountPath: /policy-dir
+                  name: policy-volume
+              command:
+                - "/bin/descheduler"
+              args:
+{{ toYaml .Values.args | indent 16 }}
+          restartPolicy: "Never"
+          serviceAccountName: {{ include "kube-descheduler.fullname" . }}
+          volumes:
+            - name: policy-volume
+              configMap:
+                name: {{ include "kube-descheduler.fullname" . }}

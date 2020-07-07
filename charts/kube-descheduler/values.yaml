@@ -1,0 +1,34 @@
+# Default values for kube-descheduler.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+image: us.gcr.io/k8s-artifacts-prod/descheduler/descheduler:v0.18.0
+
+schedule: "0 * * * *"
+
+args:
+  - "--policy-config-file"
+  - "/policy-dir/policy.yaml"
+  - "--v"
+  - "3"
+
+policy: |
+  apiVersion: "descheduler/v1alpha1"
+  kind: "DeschedulerPolicy"
+  strategies:
+    "RemoveDuplicates":
+      enabled: true
+    "RemovePodsViolatingInterPodAntiAffinity":
+      enabled: true
+    "LowNodeUtilization":
+      enabled: true
+      params:
+        nodeResourceUtilizationThresholds:
+          thresholds:
+            "cpu": 20
+            "memory": 20
+            "pods": 20
+          targetThresholds:
+            "cpu": 50
+            "memory": 50
+            "pods": 50
