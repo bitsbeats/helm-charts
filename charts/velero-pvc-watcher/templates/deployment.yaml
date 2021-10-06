@@ -5,7 +5,7 @@ metadata:
   labels:
 {{ include "velero-pvc-watcher.labels" . | indent 4 }}
 spec:
-  replicas: {{ .Values.replicaCount }}
+  replicas: 1
   selector:
     matchLabels:
       app.kubernetes.io/name: {{ include "velero-pvc-watcher.name" . }}
@@ -30,21 +30,12 @@ spec:
               protocol: TCP
           livenessProbe:
             httpGet:
-              path: "{{ index .Values "metrics" "annotations" "prometheus.io/path" }}"
+              path: /metrics
               port: http
           readinessProbe:
             httpGet:
-              path: "{{ index .Values "metrics" "annotations" "prometheus.io/path" }}"
+              path: /metrics
               port: http
-          env:
-          - name: METRICSPATH
-            value: "{{ index .Values "metrics" "annotations" "prometheus.io/path" }}"
-          - name: PORT
-            value: "{{ .Values.service.port }}"
-          - name: EXCLUDEANNOTATION
-            value: "{{ .Values.excludeAnnotation }}"
-          - name: BACKUPANNOTATION
-            value: "{{ .Values.backupAnnotation }}"
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
