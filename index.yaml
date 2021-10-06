@@ -24,6 +24,15 @@ entries:
     version: 0.1.0
   velero-pvc-watcher:
   - apiVersion: v1
+    appVersion: 0.3.0
+    created: "2021-10-06T14:04:51.373187386Z"
+    description: A Helm chart for Kubernetes
+    digest: 9544abdebc09731c9388a803106f0b37a36151ee50730d92c4d5912ae7b1aff8
+    name: velero-pvc-watcher
+    urls:
+    - https://github.com/bitsbeats/helm-charts/releases/download/velero-pvc-watcher-0.2.0/velero-pvc-watcher-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v1
     appVersion: "1.0"
     created: "2020-02-28T12:52:20.127269127Z"
     description: A Helm chart for Kubernetes
@@ -32,4 +41,4 @@ entries:
     urls:
     - https://github.com/bitsbeats/helm-charts/releases/download/velero-pvc-watcher-0.1.0/velero-pvc-watcher-0.1.0.tgz
     version: 0.1.0
-generated: "2020-02-28T12:52:20.007699791Z"
+generated: "2021-10-06T14:04:51.373196186Z"
