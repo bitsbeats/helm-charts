@@ -13,7 +13,7 @@ fullnameOverride: ""
 
 service:
   type: ClusterIP
-  port: 2112
+  port: 2121
 
 resources:
   limits:
@@ -26,7 +26,7 @@ resources:
 metrics:
   annotations:
     prometheus.io/scrape: "true"
-    prometheus.io/port: "2112"
+    prometheus.io/port: "2121"
     prometheus.io/path: "/metrics"
 
 rbac:
