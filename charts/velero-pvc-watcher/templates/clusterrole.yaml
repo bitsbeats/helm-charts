@@ -9,8 +9,9 @@ rules:
 - apiGroups:
   - ""
   resources:
-  - pods
+  - namespaces
   - persistentvolumeclaims
+  - pods
   verbs:
   - 'list'
   - 'watch'
