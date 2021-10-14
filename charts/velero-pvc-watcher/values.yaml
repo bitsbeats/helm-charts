@@ -4,7 +4,7 @@
 
 image:
   repository: bitsbeats/velero-pvc-watcher
-  tag: "0.3.1"
+  tag: "0.3.2"
   pullPolicy: Always
 
 imagePullSecrets: []
